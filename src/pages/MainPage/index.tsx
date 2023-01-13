@@ -4,6 +4,7 @@ import Tabs from "components/Tabs";
 import { Fragment, useState } from "react";
 import AboutSection from "./sections/AboutSection";
 import PortfolioSection from "./sections/PortfolioSection";
+import SkillsSection from "./sections/SkillsSection";
 
 export enum ETabsOptions {
   ABOUT = "about",
@@ -17,7 +18,7 @@ const tabsContent = {
   [ETabsOptions.ABOUT]: <AboutSection />,
   [ETabsOptions.PARTFOLIO]: <PortfolioSection />,
   // [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
-  [ETabsOptions.SKILLS]: <div>Skills</div>,
+  [ETabsOptions.SKILLS]: <SkillsSection />,
   [ETabsOptions.CONTACTS]: <div>Contacts</div>,
 };
 

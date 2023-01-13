@@ -1,0 +1,36 @@
+@import "styles";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .name {
+    @include h3;
+    color: $white;
+  }
+
+  .valueBar {
+    width: 242px;
+    display: flex;
+    gap: 40px;
+    padding-left: 40px;
+    position: relative;
+    background-color: rgba($blue, 0.5);
+
+    .active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 10px;
+      background-color: $blue;
+    }
+
+    .divider {
+      z-index: 1;
+      min-width: 10px;
+      background-color: $dark;
+      height: 10px;
+    }
+  }
+}
