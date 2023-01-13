@@ -2,6 +2,7 @@ import HeroSection from "./sections/HeroSection";
 import styles from "./index.module.scss";
 import Tabs from "components/Tabs";
 import { Fragment, useState } from "react";
+import AboutSection from "./sections/AboutSection";
 
 export enum ETabsOptions {
   ABOUT = "about",
@@ -12,7 +13,7 @@ export enum ETabsOptions {
 }
 
 const tabsContent = {
-  [ETabsOptions.ABOUT]: <div>About</div>,
+  [ETabsOptions.ABOUT]: <AboutSection />,
   [ETabsOptions.PARTFOLIO]: <div>Partfolio</div>,
   [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
   [ETabsOptions.SKILLS]: <div>Skills</div>,
@@ -20,7 +21,8 @@ const tabsContent = {
 };
 
 const MainPage = () => {
-  const [tab, setTab] = useState<ETabsOptions | null>(null);
+  // TODO: change
+  const [tab, setTab] = useState<ETabsOptions | null>(ETabsOptions.ABOUT);
 
   return (
     <div className={styles.container}>
@@ -31,7 +33,7 @@ const MainPage = () => {
             value={tab}
             onChange={(value) => setTab(value as ETabsOptions)}
           />
-          {tabsContent[tab]}
+          <div className={styles.tabContent}>{tabsContent[tab]}</div>
         </Fragment>
       ) : (
         <HeroSection onStartClick={() => setTab(ETabsOptions.ABOUT)} />

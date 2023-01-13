@@ -1,3 +1,7 @@
 @mixin primary-shadow {
   box-shadow: 6px 6px 0px $yellow;
 }
+
+@mixin primary-shadow-image {
+  filter: drop-shadow(6px 6px 0px $yellow);
+}
