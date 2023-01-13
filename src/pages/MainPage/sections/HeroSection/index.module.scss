@@ -1,4 +1,4 @@
-@import "../../../../styles";
+@import "styles";
 
 .container {
   width: 100vw;
@@ -52,7 +52,7 @@
       }
 
       &:active {
-        color: darken($color: $yellow, $amount: 10)
+        color: darken($color: $yellow, $amount: 10);
       }
     }
   }

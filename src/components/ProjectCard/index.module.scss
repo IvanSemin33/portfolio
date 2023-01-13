@@ -1,0 +1,33 @@
+@import "styles";
+
+.container {
+  width: 380px;
+  height: 240px;
+  background-color: $blue;
+  @include primary-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  .title {
+    @include h3;
+    color: $dark;
+  }
+
+  .open {
+    position: absolute;
+    bottom: 14px;
+    right: 20px;
+    @include paragraph;
+    color: $dark;
+  }
+
+  &:hover {
+    box-shadow: unset;
+    transform: translateX(6px) translateY(6px);
+  }
+}

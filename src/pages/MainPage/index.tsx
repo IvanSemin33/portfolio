@@ -3,19 +3,20 @@ import styles from "./index.module.scss";
 import Tabs from "components/Tabs";
 import { Fragment, useState } from "react";
 import AboutSection from "./sections/AboutSection";
+import PortfolioSection from "./sections/PortfolioSection";
 
 export enum ETabsOptions {
   ABOUT = "about",
-  PARTFOLIO = "partfolio",
-  EXPERIENCE = "experience",
+  PARTFOLIO = "portfolio",
+  // EXPERIENCE = "experience",
   SKILLS = "skills",
   CONTACTS = "contacts",
 }
 
 const tabsContent = {
   [ETabsOptions.ABOUT]: <AboutSection />,
-  [ETabsOptions.PARTFOLIO]: <div>Partfolio</div>,
-  [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
+  [ETabsOptions.PARTFOLIO]: <PortfolioSection />,
+  // [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
   [ETabsOptions.SKILLS]: <div>Skills</div>,
   [ETabsOptions.CONTACTS]: <div>Contacts</div>,
 };
