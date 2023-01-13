@@ -1,0 +1,59 @@
+@import "../../../../styles";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .left {
+    width: 50%;
+    height: 100%;
+    background-color: $blue;
+    @include primary-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .heroImg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    width: 50%;
+    padding-right: 40px;
+    gap: 90px;
+
+    .title {
+      .name {
+        @include section-title;
+        color: $blue;
+      }
+
+      .job {
+        @include h1;
+        color: $pink;
+      }
+    }
+
+    .startButton {
+      @include h3;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        color: $yellow;
+      }
+
+      &:active {
+        color: darken($color: $yellow, $amount: 10)
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../styles";
+
+.container {
+  width: 100vw;
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  .tab {
+    cursor: pointer;
+    @include h1;
+    color: $pink;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    &.active {
+      @include section-title;
+      opacity: 1;
+    }
+  }
+}
