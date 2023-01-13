@@ -5,6 +5,7 @@ import { Fragment, useState } from "react";
 import AboutSection from "./sections/AboutSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import SkillsSection from "./sections/SkillsSection";
+import ContactsSection from "./sections/ContactsSection";
 
 export enum ETabsOptions {
   ABOUT = "about",
@@ -19,12 +20,12 @@ const tabsContent = {
   [ETabsOptions.PARTFOLIO]: <PortfolioSection />,
   // [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
   [ETabsOptions.SKILLS]: <SkillsSection />,
-  [ETabsOptions.CONTACTS]: <div>Contacts</div>,
+  [ETabsOptions.CONTACTS]: <ContactsSection />,
 };
 
 const MainPage = () => {
   // TODO: change
-  const [tab, setTab] = useState<ETabsOptions | null>(ETabsOptions.ABOUT);
+  const [tab, setTab] = useState<ETabsOptions | null>(null);
 
   return (
     <div className={styles.container}>
