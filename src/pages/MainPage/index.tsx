@@ -1,11 +1,12 @@
 import HeroSection from "./sections/HeroSection";
 import styles from "./index.module.scss";
 import Tabs from "components/Tabs";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import AboutSection from "./sections/AboutSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import SkillsSection from "./sections/SkillsSection";
 import ContactsSection from "./sections/ContactsSection";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 export enum ETabsOptions {
   ABOUT = "about",
@@ -24,23 +25,23 @@ const tabsContent = {
 };
 
 const MainPage = () => {
-  // TODO: change
-  const [tab, setTab] = useState<ETabsOptions | null>(null);
+  const [tab, setTab] = useState<ETabsOptions | null>(ETabsOptions.ABOUT);
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Scroll: ", latest);
+  });
 
   return (
     <div className={styles.container}>
-      {tab ? (
-        <Fragment>
-          <Tabs
-            options={Object.values(ETabsOptions)}
-            value={tab}
-            onChange={(value) => setTab(value as ETabsOptions)}
-          />
-          <div className={styles.tabContent}>{tabsContent[tab]}</div>
-        </Fragment>
-      ) : (
-        <HeroSection onStartClick={() => setTab(ETabsOptions.ABOUT)} />
-      )}
+      <HeroSection />
+      <Tabs
+        options={Object.values(ETabsOptions)}
+        value={tab}
+        onChange={(value) => setTab(value as ETabsOptions)}
+      />
+
+      {tab && tabsContent[tab]}
     </div>
   );
 };

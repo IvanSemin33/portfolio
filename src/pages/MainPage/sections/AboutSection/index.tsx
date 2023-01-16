@@ -1,10 +1,33 @@
 import styles from "./index.module.scss";
 import memoji from "assets/images/memoji-about.png";
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const AboutSection = () => {
+  const { scrollYProgress } = useScroll();
+
+  const xText = useTransform(scrollYProgress, [0.32, 0.48], [-110, 0]);
+  const transformText = useMotionTemplate`translateX(${xText}%)`;
+
+  const yImage = useTransform(
+    scrollYProgress,
+    [0.32, 0.48],
+    [100, 0]
+  );
+  const transformImage = useMotionTemplate`translateY(${yImage}vw)`;
+
   return (
-    <div className={styles.container}>
-      <div className={styles.text}>
+    <motion.div className={styles.container}>
+      <motion.div
+        className={styles.text}
+        style={{
+          transform: transformText,
+        }}
+      >
         Hey there! 🖐
         <br />
         <br />
@@ -26,9 +49,16 @@ const AboutSection = () => {
         make your website not look like it was built in 1998), let's chat!
         Together, we can conquer the digital world (or at least make your
         website look good 💅).
-      </div>
-      <img className={styles.memoji} src={memoji} alt="memoji" />
-    </div>
+      </motion.div>
+      <motion.img
+        className={styles.memoji}
+        src={memoji}
+        alt="memoji"
+        style={{
+          transform: transformImage,
+        }}
+      />
+    </motion.div>
   );
 };
 

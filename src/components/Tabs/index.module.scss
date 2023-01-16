@@ -1,7 +1,7 @@
 @import "styles";
 
 .container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -9,6 +9,7 @@
   padding: 20px 40px;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 
   .tab {
     cursor: pointer;
