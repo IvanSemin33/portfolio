@@ -42,6 +42,7 @@ const MainPage = () => {
       />
       <AboutSection />
       <PortfolioSection />
+      <SkillsSection />
       {/* {tab && tabsContent[tab]} */}
     </div>
   );

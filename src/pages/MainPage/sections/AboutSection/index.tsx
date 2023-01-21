@@ -40,7 +40,7 @@ const AboutSection = () => {
     damping: 10,
   });
 
-  const transformImage = useMotionTemplate`translateY(${yImageSpring}vw)`;
+  const transformImage = useMotionTemplate`translateY(${yImageSpring}%)`;
 
   return (
     <motion.div className={styles.container}>

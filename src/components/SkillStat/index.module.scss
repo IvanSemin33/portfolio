@@ -24,6 +24,8 @@
       left: 0;
       height: 10px;
       background-color: $blue;
+      width: 100%;
+      transform-origin: left center;
     }
 
     .divider {
