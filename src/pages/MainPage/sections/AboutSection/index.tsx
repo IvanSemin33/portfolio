@@ -6,18 +6,28 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { POINTS } from "../../../../constants";
+
+const {
+  ABOUT: { START, STOP_START, STOP_END, END },
+} = POINTS;
 
 const AboutSection = () => {
   const { scrollYProgress } = useScroll();
 
-  const xText = useTransform(scrollYProgress, [0.32, 0.48], [-110, 0]);
+  const xText = useTransform(
+    scrollYProgress,
+    [START, STOP_START, STOP_END, END],
+    [-110, 0, 0, -110]
+  );
   const transformText = useMotionTemplate`translateX(${xText}%)`;
 
   const yImage = useTransform(
     scrollYProgress,
-    [0.32, 0.48],
-    [100, 0]
+    [START, STOP_START, STOP_END, END],
+    [100, 0, 0, 100]
   );
+
   const transformImage = useMotionTemplate`translateY(${yImage}vw)`;
 
   return (

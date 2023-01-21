@@ -7,23 +7,43 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
+import { POINTS } from "../../../../constants";
+
+const { HERO, HERO_NAME } = POINTS;
 
 const HeroSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
 
-  const xLeft = useTransform(scrollYProgress, [0, 0.16], [0, -103]);
+
+  const xLeft = useTransform(
+    scrollYProgress,
+    [HERO.START, HERO.END],
+    [0, -103]
+  );
   const transformLeft = useMotionTemplate`translateX(${xLeft}%)`;
 
-  const xName = useTransform(scrollYProgress, [0, 0.16], [0, -25]);
-  const scaleName = useTransform(scrollYProgress, [0.16, 0.32], [1, 70]);
+  const xName = useTransform(scrollYProgress, [HERO.START, HERO.END], [0, -25]);
+  const scaleName = useTransform(
+    scrollYProgress,
+    [HERO_NAME.START, HERO_NAME.END],
+    [1, 70]
+  );
   const transformName = useMotionTemplate`translateX(${xName}vw) scale(${scaleName})`;
-  const opacityName = useTransform(scrollYProgress, [0.16, 0.32], [1, 0]);
+  const opacityName = useTransform(
+    scrollYProgress,
+    [HERO_NAME.START, HERO_NAME.END],
+    [1, 0]
+  );
 
-  const xJob = useTransform(scrollYProgress, [0, 0.16], [0, 110]);
+  const xJob = useTransform(scrollYProgress, [HERO.START, HERO.END], [0, 110]);
   const transformJob = useMotionTemplate`translateX(${xJob}%)`;
 
-  const xStart = useTransform(scrollYProgress, [0, 0.16], [0, 120]);
+  const xStart = useTransform(
+    scrollYProgress,
+    [HERO.START, HERO.END],
+    [0, 120]
+  );
   const transformStart = useMotionTemplate`translateX(${xStart}%)`;
 
   return (
