@@ -80,13 +80,13 @@ const {
 const SkillsSection = () => {
   const { scrollYProgress } = useScroll();
 
-  const ySkillStat = useTransform(
+  const xSkillStat = useTransform(
     scrollYProgress,
     [START, STOP_START, STOP_END, END],
     [120, 0, 0, 120]
   );
 
-  const ySkillStatSpring = useSpring(ySkillStat, {
+  const xSkillStatSpring = useSpring(xSkillStat, {
     stiffness: 50,
     damping: 10,
   });
@@ -94,11 +94,11 @@ const SkillsSection = () => {
   const transformSkillsLeft = (skillIndex: number) =>
     useMotionTemplate`translateX(calc(${
       skillIndex + 1
-    } * -${ySkillStatSpring}%)`;
+    } * -${xSkillStatSpring}%)`;
   const transformSkillsRight = (skillIndex: number) =>
     useMotionTemplate`translateX(calc(${
       skillIndex + 1
-    } * ${ySkillStatSpring}%)`;
+    } * ${xSkillStatSpring}%)`;
 
   const yImage = useTransform(
     scrollYProgress,

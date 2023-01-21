@@ -16,14 +16,6 @@ export enum ETabsOptions {
   CONTACTS = "contacts",
 }
 
-const tabsContent = {
-  [ETabsOptions.ABOUT]: <AboutSection />,
-  [ETabsOptions.PARTFOLIO]: <PortfolioSection />,
-  // [ETabsOptions.EXPERIENCE]: <div>Experience</div>,
-  [ETabsOptions.SKILLS]: <SkillsSection />,
-  [ETabsOptions.CONTACTS]: <ContactsSection />,
-};
-
 const MainPage = () => {
   const [tab, setTab] = useState<ETabsOptions | null>(ETabsOptions.ABOUT);
   const { scrollYProgress } = useScroll();
@@ -41,9 +33,9 @@ const MainPage = () => {
         onChange={(value) => setTab(value as ETabsOptions)}
       />
       <AboutSection />
-      <PortfolioSection />
       <SkillsSection />
-      {/* {tab && tabsContent[tab]} */}
+      <PortfolioSection />
+      <ContactsSection />
     </div>
   );
 };

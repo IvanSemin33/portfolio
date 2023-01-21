@@ -13,13 +13,13 @@ export const POINTS = {
     STOP_END: 0.4,
     END: 0.48,
   },
-  PORTFOLIO: {
+  SKILLS: {
     START: 0.48,
     STOP_START: 0.56,
     STOP_END: 0.64,
     END: 0.72,
   },
-  SKILLS: {
+  PORTFOLIO: {
     START: 0.72,
     STOP_START: 0.8,
     STOP_END: 0.88,

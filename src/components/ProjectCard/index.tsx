@@ -1,20 +1,15 @@
 import { motion } from "framer-motion";
 import { TProject } from "pages/MainPage/sections/PortfolioSection";
-import { useState } from "react";
 import styles from "./index.module.scss";
 
 interface IProjectCardProps extends TProject {}
 
 const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <motion.a
       href={link}
       className={styles.container}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      animate={isHover ? "hover" : "initial"}
+      whileHover="hover"
       variants={{
         initial: {
           scale: 1,
@@ -35,7 +30,7 @@ const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
             },
           },
           hover: {
-            y: -80,
+            y: -76,
             transition: {
               duration: 0.2,
               delay: 0,
