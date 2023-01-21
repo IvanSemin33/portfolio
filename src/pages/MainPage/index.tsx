@@ -40,8 +40,9 @@ const MainPage = () => {
         value={tab}
         onChange={(value) => setTab(value as ETabsOptions)}
       />
-
-      {tab && tabsContent[tab]}
+      <AboutSection />
+      <PortfolioSection />
+      {/* {tab && tabsContent[tab]} */}
     </div>
   );
 };

@@ -4,6 +4,7 @@ import {
   motion,
   useMotionTemplate,
   useScroll,
+  useSpring,
   useTransform,
 } from "framer-motion";
 import { POINTS } from "../../../../constants";
@@ -20,7 +21,13 @@ const AboutSection = () => {
     [START, STOP_START, STOP_END, END],
     [-110, 0, 0, -110]
   );
-  const transformText = useMotionTemplate`translateX(${xText}%)`;
+
+  const xTextSpring = useSpring(xText, {
+    stiffness: 50,
+    damping: 10,
+  });
+
+  const transformText = useMotionTemplate`translateX(${xTextSpring}%)`;
 
   const yImage = useTransform(
     scrollYProgress,
@@ -28,7 +35,12 @@ const AboutSection = () => {
     [100, 0, 0, 100]
   );
 
-  const transformImage = useMotionTemplate`translateY(${yImage}vw)`;
+  const yImageSpring = useSpring(yImage, {
+    stiffness: 50,
+    damping: 10,
+  });
+
+  const transformImage = useMotionTemplate`translateY(${yImageSpring}vw)`;
 
   return (
     <motion.div className={styles.container}>

@@ -15,7 +15,6 @@ const HeroSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
 
-
   const xLeft = useTransform(
     scrollYProgress,
     [HERO.START, HERO.END],

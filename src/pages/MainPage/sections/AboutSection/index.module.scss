@@ -3,13 +3,13 @@
 .container {
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
 
   .text {
     @include paragraph;

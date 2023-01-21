@@ -12,22 +12,39 @@
   position: relative;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  padding: 14px 20px;
 
   .title {
     @include h3;
     color: $dark;
+    position: absolute;
+    top: 94px;
+    left: auto;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .description {
+    @include description;
+    color: $dark;
+    text-align: left;
+    opacity: 0;
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
   }
 
   .open {
     position: absolute;
-    bottom: 14px;
-    right: 20px;
+    bottom: 90px;
+    left: auto;
     @include paragraph;
     color: $dark;
+    transition: all 0.2s ease;
   }
 
-  &:hover {
+  &:active {
     box-shadow: unset;
-    transform: translateX(6px) translateY(6px);
+    scale: 1.05;
+    transform: translateX(6px) translateY(6px) !important;
   }
 }
