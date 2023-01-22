@@ -6,13 +6,11 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
 import { POINTS } from "../../../../constants";
 
 const { HERO, HERO_NAME } = POINTS;
 
 const HeroSection = () => {
-  const ref = useRef(null);
   const { scrollYProgress } = useScroll();
 
   const xLeft = useTransform(
@@ -46,7 +44,7 @@ const HeroSection = () => {
   const transformStart = useMotionTemplate`translateX(${xStart}%)`;
 
   return (
-    <div className={styles.container} ref={ref}>
+    <div className={styles.container}>
       <motion.div
         className={styles.left}
         style={{ transform: transformLeft }}
@@ -128,7 +126,7 @@ const HeroSection = () => {
             },
           }}
         >
-          {"//get to know me"}
+          {"//scroll down to know me"}
         </motion.div>
       </div>
     </div>
