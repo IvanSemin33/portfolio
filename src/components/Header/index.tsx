@@ -6,6 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import styles from "./index.module.scss";
+import { useScreen } from "hooks/useScreen";
 
 type TValue = string | null;
 
@@ -17,9 +18,12 @@ interface ITabsProps {
 
 const Header = ({ value, onChange, options }: ITabsProps) => {
   const { scrollYProgress } = useScroll();
+  const { isSmall } = useScreen();
 
   const yContainer = useTransform(scrollYProgress, [0.2, 0.32], [-100, 0]);
   const transformName = useMotionTemplate`translateY(calc(${yContainer}% - 3px))`;
+
+  const headerTextHeight = isSmall ? 48 + 20 : 64 + 20;
 
   const ySections = useTransform(
     scrollYProgress,
@@ -45,15 +49,15 @@ const Header = ({ value, onChange, options }: ITabsProps) => {
       0, // ABOUT.STOP_END
       0, // ABOUT.END
       0, // SKILLS.START
-      1 * (64 + 20), // SKILLS.STOP_START
-      1 * (64 + 20), // SKILLS.STOP_END
-      1 * (64 + 20), // SKILLS.END
-      1 * (64 + 20), // PORTFOLIO.START
-      2 * (64 + 20), // PORTFOLIO.STOP_START
-      2 * (64 + 20), // PORTFOLIO.STOP_END
-      2 * (64 + 20), // PORTFOLIO.END
-      2 * (64 + 20), // CONTACTS.START
-      3 * (64 + 20), // CONTACTS.END
+      1 * headerTextHeight, // SKILLS.STOP_START
+      1 * headerTextHeight, // SKILLS.STOP_END
+      1 * headerTextHeight, // SKILLS.END
+      1 * headerTextHeight, // PORTFOLIO.START
+      2 * headerTextHeight, // PORTFOLIO.STOP_START
+      2 * headerTextHeight, // PORTFOLIO.STOP_END
+      2 * headerTextHeight, // PORTFOLIO.END
+      2 * headerTextHeight, // CONTACTS.START
+      3 * headerTextHeight, // CONTACTS.END
     ]
   );
 

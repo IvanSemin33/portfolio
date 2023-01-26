@@ -87,13 +87,13 @@ $secondary-font-family: "Elianto", sans-serif;
 @mixin paragraph-mobile {
   font-family: $secondary-font-family;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
 }
 
 @mixin description-mobile {
   font-family: $secondary-font-family;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 150%;
 }

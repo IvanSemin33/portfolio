@@ -8,10 +8,19 @@
   flex-direction: column;
   justify-content: center;
 
+  @include small {
+    padding: 0 20px;
+  }
+
   .text {
     @include paragraph;
     color: $white;
     width: 70vw;
+
+    @include small {
+      @include paragraph-mobile;
+      width: 100%;
+    }
   }
 
   .memoji {

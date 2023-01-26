@@ -12,6 +12,10 @@
   padding-bottom: 20px;
   z-index: 4;
 
+  @include small {
+    padding-bottom: 10px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -42,10 +46,18 @@
       height: 64px;
       align-items: center;
 
+      @include small {
+        height: 48px;
+      }
+
       .section {
         @include section-title;
         color: $pink;
         height: 100%;
+
+        @include small {
+          @include section-title-mobile;
+        }
       }
     }
   }
