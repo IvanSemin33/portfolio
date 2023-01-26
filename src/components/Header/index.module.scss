@@ -1,0 +1,52 @@
+@import "styles";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 4;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: $blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: auto;
+    width: 50px;
+    height: 2px;
+    background-color: $blue;
+  }
+
+  .sectionsWrapper {
+    overflow: hidden;
+
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 64px;
+      align-items: center;
+
+      .section {
+        @include section-title;
+        color: $pink;
+        height: 100%;
+      }
+    }
+  }
+}

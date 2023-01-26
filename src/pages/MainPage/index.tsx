@@ -1,6 +1,6 @@
 import HeroSection from "./sections/HeroSection";
 import styles from "./index.module.scss";
-import Tabs from "components/Tabs";
+import Header from "components/Header";
 import { useState } from "react";
 import AboutSection from "./sections/AboutSection";
 import PortfolioSection from "./sections/PortfolioSection";
@@ -39,11 +39,11 @@ const MainPage = () => {
   return (
     <div className={styles.container}>
       <HeroSection />
-      {/* <Tabs
+      <Header
         options={Object.values(ETabsOptions)}
         value={tab}
         onChange={(value) => setTab(value as ETabsOptions)}
-      /> */}
+      />
       <SectionWrapper active={tab === ETabsOptions.ABOUT}>
         <AboutSection />
       </SectionWrapper>
