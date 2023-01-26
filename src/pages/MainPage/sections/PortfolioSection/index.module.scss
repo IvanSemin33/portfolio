@@ -9,4 +9,15 @@
   gap: 80px;
   justify-content: center;
   align-content: center;
+  align-items: center;
+
+  @include medium {
+    gap: 40px;
+  }
+
+  @include small {
+    overflow: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }

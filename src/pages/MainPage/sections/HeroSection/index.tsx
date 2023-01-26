@@ -7,10 +7,12 @@ import {
   useTransform,
 } from "framer-motion";
 import { POINTS } from "../../../../constants";
+import { useScreen } from "hooks/useScreen";
 
 const { HERO, HERO_NAME } = POINTS;
 
 const HeroSection = () => {
+  const { isSmall } = useScreen();
   const { scrollYProgress } = useScroll();
 
   const xLeft = useTransform(
@@ -63,10 +65,12 @@ const HeroSection = () => {
           alt="hero"
           className={styles.heroImg}
           initial={{
-            y: "100%",
+            x: isSmall ? "-100%" : undefined,
+            y: isSmall ? undefined : "100%",
           }}
           animate={{
             y: 0,
+            x: isSmall ? 0 : undefined,
             transition: {
               duration: 0.5,
               delay: 0.8,

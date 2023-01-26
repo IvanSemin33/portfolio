@@ -3,7 +3,6 @@
 .container {
   width: 100vw;
   height: 100vh;
-  display: flex;
   position: fixed;
   z-index: 2;
 
@@ -14,12 +13,21 @@
     @include primary-shadow;
     position: relative;
 
+    @include small {
+      height: 50vh;
+      width: 100vw;
+    }
+
     .heroImg {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 50vw;
       height: auto;
+
+      @include small {
+        width: 100vw;
+      }
     }
   }
 
@@ -37,21 +45,48 @@
     right: 0;
     top: 0;
 
+    @include small {
+      width: 100%;
+      height: 50vh;
+      top: unset;
+      padding-right: 20px;
+      gap: 40px;
+      bottom: -40px;
+      justify-content: flex-start;
+    }
+
     .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+
       .name {
         @include section-title;
         color: $blue;
+
+        @include small {
+          @include section-title-mobile;
+        }
       }
 
       .job {
         @include h1;
         color: $pink;
+
+        @include small {
+          @include h1-mobile;
+        }
       }
     }
 
     .start {
       @include h3;
       color: $white;
+
+      @include small {
+        @include h3-mobile;
+      }
     }
   }
 }

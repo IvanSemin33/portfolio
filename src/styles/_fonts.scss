@@ -53,3 +53,47 @@ $secondary-font-family: "Elianto", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
+
+// Mobile
+@mixin section-title-mobile {
+  font-family: $primary-font-family;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin h1-mobile {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+}
+
+@mixin h2-mobile {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+@mixin h3-mobile {
+  font-family: $secondary-font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+@mixin paragraph-mobile {
+  font-family: $secondary-font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@mixin description-mobile {
+  font-family: $secondary-font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}

@@ -38,7 +38,9 @@ const MainPage = () => {
 
   return (
     <div className={styles.container}>
-      <HeroSection />
+      <SectionWrapper active={!tab}>
+        <HeroSection />
+      </SectionWrapper>
       <Header
         options={Object.values(ETabsOptions)}
         value={tab}
