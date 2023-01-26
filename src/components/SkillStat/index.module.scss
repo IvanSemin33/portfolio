@@ -5,9 +5,17 @@
   flex-direction: column;
   gap: 14px;
 
+  @include small {
+    gap: 10px;
+  }
+
   .name {
     @include h3;
     color: $white;
+
+    @include small {
+      @include h3-mobile;
+    }
   }
 
   .valueBar {
@@ -18,6 +26,12 @@
     position: relative;
     background-color: rgba($blue, 0.5);
 
+    @include small {
+      width: 132px;
+      gap: 20px;
+      padding-left: 20px;
+    }
+
     .active {
       position: absolute;
       top: 0;
@@ -26,6 +40,10 @@
       background-color: $blue;
       width: 100%;
       transform-origin: left center;
+
+      @include small {
+        height: 6px;
+      }
     }
 
     .divider {
@@ -33,6 +51,11 @@
       min-width: 10px;
       background-color: $dark;
       height: 10px;
+
+      @include small {
+        min-width: 8px;
+        height: 6px;
+      }
     }
   }
 }

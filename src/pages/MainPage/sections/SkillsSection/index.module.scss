@@ -8,10 +8,18 @@
   justify-content: space-between;
   align-items: center;
 
+  @include small {
+    padding: 0 20px;
+  }
+
   .skillColumn {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include small {
+      gap: 40px;
+    }
   }
 
   .memoji {
