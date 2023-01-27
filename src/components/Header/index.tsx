@@ -1,4 +1,4 @@
-import { POINTS } from "../../constants";
+import { POINTS } from "@/constants";
 import {
   motion,
   useMotionTemplate,
@@ -6,7 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import styles from "./index.module.scss";
-import { useScreen } from "hooks/useScreen";
+import { useScreen } from "@/hooks/useScreen";
 
 type TValue = string | null;
 

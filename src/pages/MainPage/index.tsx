@@ -1,14 +1,14 @@
 import HeroSection from "./sections/HeroSection";
 import styles from "./index.module.scss";
-import Header from "components/Header";
+import Header from "@/components/Header";
 import { useState } from "react";
 import AboutSection from "./sections/AboutSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import SkillsSection from "./sections/SkillsSection";
 import ContactsSection from "./sections/ContactsSection";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import { POINTS } from "../../constants";
-import SectionWrapper from "components/SectionWrapper";
+import { POINTS } from "@/constants";
+import SectionWrapper from "@/components/SectionWrapper";
 
 export enum ETabsOptions {
   ABOUT = "about",

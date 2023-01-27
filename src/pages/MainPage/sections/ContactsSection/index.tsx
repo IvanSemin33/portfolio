@@ -1,11 +1,11 @@
 import styles from "./index.module.scss";
-import memoji from "assets/images/memoji-contacts.png";
-import { ReactComponent as PhoneIcon } from "assets/icons/phone.svg";
-import { ReactComponent as EmailIcon } from "assets/icons/email.svg";
-import { ReactComponent as TelegramIcon } from "assets/icons/telegram.svg";
-import { ReactComponent as LinkedinIcon } from "assets/icons/linkedin.svg";
-import { ReactComponent as GithubIcon } from "assets/icons/github.svg";
-import { POINTS } from "../../../../constants";
+import memoji from "@/assets/images/memoji-contacts.png";
+import { ReactComponent as PhoneIcon } from "@/assets/icons/phone.svg";
+import { ReactComponent as EmailIcon } from "@/assets/icons/email.svg";
+import { ReactComponent as TelegramIcon } from "@/assets/icons/telegram.svg";
+import { ReactComponent as LinkedinIcon } from "@/assets/icons/linkedin.svg";
+import { ReactComponent as GithubIcon } from "@/assets/icons/github.svg";
+import { POINTS } from "@/constants";
 import {
   motion,
   useMotionTemplate,

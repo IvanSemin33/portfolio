@@ -1,5 +1,5 @@
-import ProjectCard from "components/ProjectCard";
-import { POINTS } from "../../../../constants";
+import ProjectCard from "@/components/ProjectCard";
+import { POINTS } from "@/constants";
 import {
   motion,
   useMotionTemplate,
@@ -13,7 +13,7 @@ export type TProject = {
   title: string;
   link: string;
   description: string;
-}
+};
 
 const projects: TProject[] = [
   {

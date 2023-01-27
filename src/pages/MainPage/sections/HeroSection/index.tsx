@@ -1,13 +1,13 @@
 import styles from "./index.module.scss";
-import heroImg from "assets/images/hero.png";
+import heroImg from "@/assets/images/hero.png";
 import {
   motion,
   useMotionTemplate,
   useScroll,
   useTransform,
 } from "framer-motion";
-import { POINTS } from "../../../../constants";
-import { useScreen } from "hooks/useScreen";
+import { POINTS } from "@/constants";
+import { useScreen } from "@/hooks/useScreen";
 
 const { HERO, HERO_NAME } = POINTS;
 

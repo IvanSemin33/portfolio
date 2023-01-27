@@ -1,7 +1,7 @@
-import SkillStat from "components/SkillStat";
+import SkillStat from "@/components/SkillStat";
 import styles from "./index.module.scss";
-import memoji from "assets/images/memoji-skills.png";
-import { POINTS } from "../../../../constants";
+import memoji from "@/assets/images/memoji-skills.png";
+import { POINTS } from "@/constants";
 import {
   motion,
   useMotionTemplate,

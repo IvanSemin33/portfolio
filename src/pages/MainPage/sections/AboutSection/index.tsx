@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import memoji from "assets/images/memoji-about.png";
+import memoji from "@/assets/images/memoji-about.png";
 import {
   motion,
   useMotionTemplate,
@@ -7,7 +7,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { POINTS } from "../../../../constants";
+import { POINTS } from "@/constants";
 
 const {
   ABOUT: { START, STOP_START, STOP_END, END },
