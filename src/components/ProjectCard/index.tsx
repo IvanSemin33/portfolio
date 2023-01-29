@@ -1,19 +1,33 @@
-import { motion } from "framer-motion";
-import { TProject } from "pages/MainPage/sections/PortfolioSection";
+import { motion, useInView } from "framer-motion";
+import { TProject } from "@/pages/MainPage/sections/PortfolioSection";
 import styles from "./index.module.scss";
+import { useEffect, useRef, useState } from "react";
+import { useScreen } from "@/hooks/useScreen";
 
 interface IProjectCardProps extends TProject {}
 
 const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
+  const ref = useRef<HTMLAnchorElement>(null);
+  const isInView = useInView(ref, { amount: 0.7 });
+  const { isSmall } = useScreen();
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (isSmall) {
+      setIsHovered(isInView);
+    }
+  }, [isInView, isSmall]);
+
   return (
     <motion.a
+      ref={ref}
       href={link}
       className={styles.container}
-      whileHover="hover"
+      animate={isHovered ? "hover" : "initial"}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       variants={{
-        initial: {
-          scale: 1,
-        },
         hover: {
           scale: 1.05,
         },
@@ -21,16 +35,13 @@ const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
     >
       <motion.div
         className={styles.title}
+        transition={{
+          duration: 0.2,
+          delay: 0.2,
+        }}
         variants={{
-          initial: {
-            y: 0,
-            transition: {
-              duration: 0.2,
-              delay: 0.2,
-            },
-          },
           hover: {
-            y: -76,
+            top: 20,
             transition: {
               duration: 0.2,
               delay: 0,
@@ -42,14 +53,11 @@ const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
       </motion.div>
       <motion.div
         className={styles.description}
+        transition={{
+          duration: 0.1,
+          delay: 0,
+        }}
         variants={{
-          initial: {
-            opacity: 0,
-            transition: {
-              duration: 0.2,
-              delay: 0,
-            },
-          },
           hover: {
             opacity: 1,
             transition: {
@@ -62,17 +70,15 @@ const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
         {description}
       </motion.div>
       <motion.div
+        layout
         className={styles.open}
+        transition={{
+          duration: 0.2,
+          delay: 0.2,
+        }}
         variants={{
-          initial: {
-            y: 0,
-            transition: {
-              duration: 0.2,
-              delay: 0.2,
-            },
-          },
           hover: {
-            y: 76,
+            bottom: 20,
             transition: {
               duration: 0.2,
               delay: 0,

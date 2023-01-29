@@ -10,14 +10,23 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+  padding-top: 104px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include medium {
     gap: 40px;
   }
 
   @include small {
-    overflow: scroll;
+    overflow-x: scroll;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    padding: 0 20px;
+    gap: 40px;
   }
 }
