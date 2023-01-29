@@ -80,7 +80,7 @@ const ContactsSection = () => {
               transform: transformContact(contactIndex),
             }}
           >
-            <Icon width={26} height={26} />
+            <Icon className={styles.icon} />
             <motion.a
               href={link}
               className={styles.link}

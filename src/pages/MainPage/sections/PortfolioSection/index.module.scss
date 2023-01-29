@@ -3,19 +3,21 @@
 .container {
   width: 100%;
   height: 100%;
-  padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding-top: 104px;
   scrollbar-width: none;
   -ms-overflow-style: none;
-
+  padding: 104px 40px 0 40px;
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @include small {
+    padding: 78px 20px 0 20px;
   }
 
   @include medium {
@@ -26,7 +28,6 @@
     overflow-x: scroll;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    padding: 0 20px;
     gap: 40px;
   }
 }
