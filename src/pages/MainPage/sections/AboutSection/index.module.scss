@@ -15,7 +15,7 @@
   .text {
     @include paragraph;
     color: $white;
-    width: 70vw;
+    width: 70%;
 
     @include small {
       @include paragraph-mobile;
