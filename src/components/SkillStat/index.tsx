@@ -18,8 +18,6 @@ const SkillStat = ({ name, value, ...containerProps }: ISkillStatProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
 
-  const renderDivider = () => <div className={styles.divider} />;
-
   const activeWidth = useMotionValue<number>(0);
 
   useEffect(() => {
@@ -45,7 +43,9 @@ const SkillStat = ({ name, value, ...containerProps }: ISkillStatProps) => {
           className={styles.active}
           style={{ transform: transformActive }}
         />
-        {Array.from({ length: 4 }).map(renderDivider)}
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div className={styles.divider} key={`${name}${index}`} />
+        ))}
       </div>
     </motion.div>
   );

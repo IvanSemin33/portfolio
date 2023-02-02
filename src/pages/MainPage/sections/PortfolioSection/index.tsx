@@ -76,7 +76,7 @@ const PortfolioSection = () => {
       }}
     >
       {projects.map((project) => (
-        <ProjectCard {...project} />
+        <ProjectCard {...project} key={project.title} />
       ))}
     </motion.div>
   );

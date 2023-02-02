@@ -116,10 +116,14 @@ const SkillsSection = () => {
   return (
     <div className={styles.container}>
       {skills.map((skillColumn, columnIndex) => (
-        <div className={styles.skillColumn}>
+        <div
+          className={styles.skillColumn}
+          key={columnIndex === 0 ? "left" : "right"}
+        >
           {skillColumn.map((skill, skillIndex) => (
             <SkillStat
               {...skill}
+              key={skill.name}
               style={{
                 transform:
                   columnIndex === 0

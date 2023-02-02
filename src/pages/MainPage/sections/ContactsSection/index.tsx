@@ -79,6 +79,7 @@ const ContactsSection = () => {
             style={{
               transform: transformContact(contactIndex),
             }}
+            key={data}
           >
             <Icon className={styles.icon} />
             <motion.a
