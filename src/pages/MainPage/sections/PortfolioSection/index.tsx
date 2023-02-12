@@ -17,9 +17,10 @@ export type TProject = {
 
 const projects: TProject[] = [
   {
-    title: "Project 1",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Dashboard App",
+    link: "https://github.com/IvanSemin33/dashboard-app",
+    description:
+      "Example of dashboard app with React, Redux, TypeScript, Ant Design, etc.",
   },
   {
     title: "Project 2",
