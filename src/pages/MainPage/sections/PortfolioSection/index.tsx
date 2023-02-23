@@ -22,6 +22,11 @@ const projects: TProject[] = [
     description: "React UI library based on Framer Motion. (Work in progress)",
   },
   {
+    title: "Portfolio",
+    link: "https://github.com/IvanSemin33/portfolio",
+    description: "My portfolio website.",
+  },
+  {
     title: "Dashboard App",
     link: "https://github.com/IvanSemin33/dashboard-app",
     description:
@@ -43,11 +48,6 @@ const projects: TProject[] = [
     title: "TRAXNYC",
     link: "https://www.traxnyc.com/",
     description: "Big online store for a retail jewelry enterprise.",
-  },
-  {
-    title: "educa",
-    link: "https://educa.ru/",
-    description: "Online education platform.",
   },
 ];
 

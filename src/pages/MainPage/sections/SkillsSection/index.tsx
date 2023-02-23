@@ -13,62 +13,62 @@ import {
 const skills = [
   [
     {
-      name: "HTML",
-      value: 100,
-    },
-    {
-      name: "CSS",
-      value: 80,
-    },
-    {
-      name: "JavaScript",
-      value: 70,
-    },
-    {
-      name: "React",
-      value: 60,
+      name: "HTML/CSS/JavaScript",
+      value: 95,
     },
     {
       name: "TypeScript",
-      value: 50,
+      value: 93,
     },
     {
-      name: "Node.js",
-      value: 40,
+      name: "Node.js/Express",
+      value: 85,
     },
     {
-      name: "MongoDB",
-      value: 30,
+      name: "WebSockets",
+      value: 73,
+    },
+    {
+      name: "DevOps",
+      value: 89,
+    },
+    {
+      name: "MongoDB/PostgreSQL",
+      value: 60,
+    },
+    {
+      name: "Testing",
+      value: 88,
     },
   ],
   [
     {
-      name: "HTML",
-      value: 100,
+      name: "React/React Native",
+      value: 95,
     },
     {
-      name: "CSS",
+      name: "Design Systems",
+      value: 93,
+    },
+    {
+      name: "Redux/mobX",
+      value: 90,
+    },
+    {
+      name: "English",
+      value: 78,
+    },
+    {
+      name: "React Query",
+      value: 93,
+    },
+    {
+      name: "Monorepos",
       value: 80,
     },
     {
-      name: "JavaScript",
-      value: 70,
-    },
-    {
-      name: "React",
-      value: 60,
-    },
-    {
-      name: "TypeScript",
-      value: 50,
-    },
-    {
-      name: "Node.js",
-      value: 40,
-    },
-    {
-      name: "MongoDB",
-      value: 30,
+      name: "Framer Motion",
+      value: 88,
     },
   ],
 ];
