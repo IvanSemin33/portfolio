@@ -1,5 +1,6 @@
 # 👨‍💻 My personal web portfolio
 
+🔗 https://ivan-semin.com/
 
 ## Available Scripts
 
