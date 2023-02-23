@@ -8,11 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 26.5px;
+  padding-bottom: 13.5px;
   z-index: 4;
 
   @include small {
+    padding-top: 20px;
     padding-bottom: 10px;
   }
 
