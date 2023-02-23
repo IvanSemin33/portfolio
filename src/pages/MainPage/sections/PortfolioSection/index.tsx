@@ -17,35 +17,37 @@ export type TProject = {
 
 const projects: TProject[] = [
   {
+    title: "Motion UI",
+    link: "https://github.com/IvanSemin33/motion-ui",
+    description: "React UI library based on Framer Motion. (Work in progress)",
+  },
+  {
     title: "Dashboard App",
     link: "https://github.com/IvanSemin33/dashboard-app",
     description:
       "Example of dashboard app with React, Redux, TypeScript, Ant Design, etc.",
   },
   {
-    title: "Project 2",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Hiyoume",
+    link: "https://www.hiyoume.io/",
+    description:
+      "Hiyoume is a mobile relationship app, with access to two communities designed to create authethic connections online.",
   },
   {
-    title: "Project 3",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "IQM",
+    link: "https://iqm.com/",
+    description:
+      "Political-first programmatic media buying and voter intelligence platform.",
   },
   {
-    title: "Project 4",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "TRAXNYC",
+    link: "https://www.traxnyc.com/",
+    description: "Big online store for a retail jewelry enterprise.",
   },
   {
-    title: "Project 5",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Project 6",
-    link: "https://github.com/IvanSemin33",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "educa",
+    link: "https://educa.ru/",
+    description: "Online education platform.",
   },
 ];
 
