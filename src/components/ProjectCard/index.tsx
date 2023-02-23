@@ -3,6 +3,7 @@ import { TProject } from "@/pages/MainPage/sections/PortfolioSection";
 import styles from "./index.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { useScreen } from "@/hooks/useScreen";
+import useDeviceDetect from "@/hooks/useDeviceDetect";
 
 interface IProjectCardProps extends TProject {}
 
@@ -10,14 +11,15 @@ const ProjectCard = ({ title, link, description }: IProjectCardProps) => {
   const ref = useRef<HTMLAnchorElement>(null);
   const isInView = useInView(ref, { amount: 0.7 });
   const { isSmall } = useScreen();
+  const { isMobile } = useDeviceDetect();
 
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (isSmall) {
+    if (isSmall || isMobile) {
       setIsHovered(isInView);
     }
-  }, [isInView, isSmall]);
+  }, [isInView, isSmall, isMobile]);
 
   return (
     <motion.a
