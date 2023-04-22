@@ -1,6 +1,6 @@
 # 👨‍💻 My personal web portfolio
 
-🔗 ivan-semin.com
+🔗 [ivan-semin.com](https://ivan-semin.com/)
 
 ## Available Scripts
 
