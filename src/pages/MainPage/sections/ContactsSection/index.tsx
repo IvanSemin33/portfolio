@@ -22,8 +22,8 @@ const contacts = [
   },
   {
     Icon: EmailIcon,
-    data: "ivanswork24@gmail.com",
-    link: "mailto:ivanswork24@gmail.com",
+    data: "me@ivan-semin.com",
+    link: "mailto:me@ivan-semin.com",
   },
   {
     Icon: TelegramIcon,
