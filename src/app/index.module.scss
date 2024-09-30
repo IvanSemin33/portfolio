@@ -1,12 +1,13 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(6, 14, 24);
+  background-color: #060e18;
   position: relative;
 }
 
 .animationContainer {
   position: absolute;
+  background-color: #060e18;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,4 +15,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
